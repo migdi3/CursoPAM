@@ -1,0 +1,22 @@
+package com.redhat;
+
+import Sandwich;
+import Question;
+import QuestionType;
+
+
+dialect  "mvel"
+
+//add food contains query here
+
+rule "menu"
+when
+	Question( questionType == QuestionType.MENU )
+	s : Sandwich()
+then
+	System.out.println(s.getName());
+end
+
+//add what contains rule here
+
+//add contains what rule here
